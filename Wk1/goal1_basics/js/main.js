@@ -178,7 +178,7 @@ console.log('------ arrays ----------');
      - in javascript, arrays are constructed by the brackets [ and ]
 
  */
-  // var myArr = ['bond', 007, function(){}, true];
+//   var myArr = ['bond', 007, function(){}, true];
 
  /*
     - arrays can hold any value type, separated by comma
@@ -187,6 +187,11 @@ console.log('------ arrays ----------');
  */
 
     //arrays can hold any data type
+/*console.log("index 0: ", myArr[0]);
+console.log("index 1: ", myArr[1]);
+console.log("index 2: ", myArr[2]);
+console.log("index 3: ", myArr[3]);*/
+//console.log("index 4: ", myArr[4]);
 
 
 
@@ -198,7 +203,9 @@ console.log('------ arrays ----------');
     2.  console.log the sum of all the numbers in an array
 
  ********************************************/
-
+var funArr = [10,50,100,200];
+console.log(funArr[1]);
+console.log("the sum of all numbers: ", funArr[0] + funArr[1] + funArr[2] + funArr[3]);
 
 
 /*******************************************
@@ -215,7 +222,12 @@ console.log('------ arrays ----------');
     3. output array items using string concatenation
 
  ********************************************/
+var myArray = new Array();
+myArray[0] = "baseball";
+myArray[1] = "football";
+myArray[2] = "basketball";
 
+console.log(myArray[0] + ',' + myArray[1] + ',' + myArray[2]+ ', are all my favorite sports!');
 
  // conditionals: (definition, indexing, math, if, if-else, if-else if, ternary)
 console.log('------ conditionals ----------');
@@ -531,8 +543,7 @@ console.log('------Functions ----------');
      - type the below as an example
         functionName();
  *****************************
-
-
+*/
 
 
  /*
@@ -570,7 +581,14 @@ console.log('------Functions ----------');
     - items inside our function we call on these variables.. such as:
  */
 
+/*var value1 = 1;
+var value2 = 2;
 
+var myFn = function (var1, var2){
+    console.log("function number: ", var1 + var2 );
+
+};
+myFn(value1, value2);*/
 
 
 /*******************************************
@@ -584,8 +602,16 @@ console.log('------Functions ----------');
      5.  second time: pass a 2 into the funciton as an argument
      6.  console.log the results
  ********************************************/
+/*var myctr = 1;
 
+var myCounter = function(newct){
+    var myctr = 50;
+    myctr+= newct;
+    console.log("counter = ", myctr);
+};
 
+myCounter(5);
+myCounter(2);*/
 
 
 /*******************************************
@@ -598,12 +624,15 @@ console.log('------Functions ----------');
     - the called function should be assigned to a variable (i.e name - see below)
  ********************************************/
 
-
+/*var myFn = function(){
+    return "James Bond";
+};
+var name = myFn();
+console.log("name:", name);*/
 
     // if a return gives back no value, it instead returns “undefined”
     // this technique is commonly used to end a function early, during execution
     // change the return statement to this 'return;'
-
 
 
 /*******************************************
@@ -616,9 +645,18 @@ console.log('------Functions ----------');
     4.  console.log the results
  ********************************************/
 
+/*var myctr= 1;
 
+var myCounter = function(newct){
+    myctr += newct;
+    return myctr;
 
+}
+var cnt = myCounter(5);
+console.log('counter =', cnt);
 
+var cnt = myCounter(2);
+console.log('counter =', cnt);*/
 /*******************************************
  STUDENT ACTIVITY 8:
 
@@ -629,3 +667,32 @@ console.log('------Functions ----------');
  5. console.log the Results
  ********************************************/
 
+/*var value1 = "Overcast";
+var value2 = 4;
+
+function surferBob(weather, waves) {
+    var bobsMood;
+    if (weather === "Sunny") {
+        if (waves === 10) {
+            bobsMood = "pumped";
+        } else if (waves >= 5 && waves <= 9) {
+            bobsMood = "mellow";
+        } else {
+            bobsMood = "bummed";
+        }
+    } else if (weather === "Overcast") {
+        if (waves <= 10 && waves >= 7) {
+            bobsMood = 'jackedUp';
+        } else if (waves <= 6 && waves >= 3) {
+            bobsMood = "totally bummed";
+        } else {
+            bobsMood = "not happy";
+        }
+    } else {
+        bobsMood = "sad";
+    }
+    return bobsMood;
+}
+
+var bob = surferBob(value1,value2);
+console.log("Bob is feeling ", bob + " today.");*/
