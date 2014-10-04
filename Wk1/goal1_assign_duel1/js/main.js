@@ -8,7 +8,7 @@ Assignment: Goal1: Assignment: Duel1
 (function(){                                        //I not sure why we do this. I imagine it gets this going as soon as the browser opens the js file
 
     console.log("FIGHT!!!");                        //This was so I could test to see if I linked up my Javascript to my HTML document.
-
+//___________________________________VARIABLES______________________________________________________//
     //player name
     var playerOneName = "Mr. Rogers";               //This variable is declared for the first player
     var playerTwoName = "Captain Kangaroo";         //This variable is declared for the second player
@@ -54,7 +54,7 @@ Assignment: Goal1: Assignment: Duel1
                 round++;                                                                                // this adds one to the round
                 alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth); //this alert post after every round that does not produce a winner
 
-            } else{
+            } else{                                                                                     // else will execute code if there is a winner or if everyone dies.
                 alert(results);                                                                         // gives the user the results
                 break;                                                                                  // this puts an end to all this craziness
             }                                                                                           // end of if else statement
