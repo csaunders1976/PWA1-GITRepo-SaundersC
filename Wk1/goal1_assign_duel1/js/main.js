@@ -24,12 +24,13 @@ Assignment: Goal1: Assignment: Duel1
     //initiate round
     var round=0;                                    // This variable is for the round that will be incremented for the for loop below
 
+//__________________________________END OF VARIABLES___________________________________________________//
     function fight(){                                                                                   // This function is for the fight itself
 //      console.log('in the fight function');                                                           // this console.log was to help me understand the order in which code is executed
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);       // This is an alert to start the game. It states
         for (var i = 0; i < 10; i++){                                                                   // this is a for loop sets up 10 rounds of fighting
             //console.log(i);                                                                           // this console.log helps me determine if my for loop is producing 10 rounds
-            //random formula is - Math.floor(Math.random() * (max - min) + min);
+            //random formula is - Math.floor(Math.random() * (max - min) + min);                        // this will create a random number so that the results of the fight are unpredictable
             var minDamage1 = player1Damage * .5;                                                        // this variable declares the value for minimum damage for player one
             var minDamage2 = player2Damage * .5;                                                        // this variable declares the value for minimum damage for player two
             var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);                   // this formula creates a random number player one's damage
@@ -49,9 +50,8 @@ Assignment: Goal1: Assignment: Duel1
             //check for victor
             var results = winnerCheck();                                                                 // this variable is a function call that captures the result of the winnerCheck function
             console.log(results);                                                                        // this logs the result or information returned by the winnerCheck function
-            if (results==="no winner")                                                                   // this if statement helps determine if there is a winner or if the rounds need to to continue
-            {
-                round++;                                                                                // this adds one to the round
+            if (results==="no winner"){                                                                  // this if statement helps determine if there is a winner or if the rounds need to to continue
+                round++;                                                                                 // this adds one to the round
                 alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth); //this alert post after every round that does not produce a winner
 
             } else{                                                                                     // else will execute code if there is a winner or if everyone dies.
@@ -70,8 +70,7 @@ Assignment: Goal1: Assignment: Duel1
             result = "You Both Die";                            // this result is if both players health points drop below 1 during the same round
         } else if(playerOneHealth<1){                           // this else if condition determines if player one health drops below one first
             result =playerTwoName+" WINS!!!";                   // this is the result if player ones health drops below 1 first
-        } else if (playerTwoHealth<1)                           // this else if condition deterimines if player twos health drops below one first
-        {
+        } else if (playerTwoHealth<1){                           // this else if condition determines if player twos health drops below one first
             result = playerOneName+" WINS!!!";                  // this result occurs with player two's health drops below 1 first
         }                                                       // end of else if
         return result;                                          // this returns the information computed by the winnerCheck function which determines the winner
