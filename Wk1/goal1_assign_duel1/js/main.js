@@ -10,8 +10,8 @@ Assignment: Goal1: Assignment: Duel1
     console.log("FIGHT!!!");                        //This was so I could test to see if I linked up my Javascript to my HTML document.
 //___________________________________VARIABLES______________________________________________________//
     //player name
-    var playerOneName = "Mr. Rogers";               //This variable is declared for the first player
-    var playerTwoName = "Captain Kangaroo";         //This variable is declared for the second player
+    var playerOneName = "Mr. Rogers";               //This variable is declared for the name of the first player
+    var playerTwoName = "Captain Kangaroo";         //This variable is declared for the name of the second player
 
     //player damage
     var player1Damage = 20;                         // This variable is to quantify how much damage is done if hit during a round for player one
@@ -35,7 +35,6 @@ Assignment: Goal1: Assignment: Duel1
             var minDamage2 = player2Damage * .5;                                                        // this variable declares the value for minimum damage for player two
             var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);                   // this formula creates a random number player one's damage
             var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);                   // this formula creates a random number player two's damage
-
        //   console.log(f1);                                                                            // this console.log is to see if my formula worked for f1
        //   console.log(f2);                                                                            // this console.log is to see if my formula worked for f2
             //inflict damage
@@ -56,7 +55,8 @@ Assignment: Goal1: Assignment: Duel1
 
             } else{                                                                                     // else will execute code if there is a winner or if everyone dies.
                 alert(results);                                                                         // gives the user the results
-                break;                                                                                  // this puts an end to all this craziness
+                break;                                                                                  // this puts an end to all this craziness. If a winner is determined before the ten rounds
+                                                                                                        // are over this ends the rounds
             }                                                                                           // end of if else statement
 
         }                                                                                               // end of for loop
@@ -70,7 +70,7 @@ Assignment: Goal1: Assignment: Duel1
             result = "You Both Die";                            // this result is if both players health points drop below 1 during the same round
         } else if(playerOneHealth<1){                           // this else if condition determines if player one health drops below one first
             result =playerTwoName+" WINS!!!";                   // this is the result if player ones health drops below 1 first
-        } else if (playerTwoHealth<1){                           // this else if condition determines if player twos health drops below one first
+        } else if (playerTwoHealth<1){                          // this else if condition determines if player twos health drops below one first
             result = playerOneName+" WINS!!!";                  // this result occurs with player two's health drops below 1 first
         }                                                       // end of else if
         return result;                                          // this returns the information computed by the winnerCheck function which determines the winner
