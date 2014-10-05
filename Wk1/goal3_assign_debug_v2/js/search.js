@@ -33,11 +33,11 @@ October 5, 2014
 			return;                                                 // the if statement stops
 		};                                                          // this ends the if statement. does not require semi-colon
 		
-		search(query);
-	};
+		search(query);                                              // this is suppose to be a function call. The function is below the call. It is an anonymous function so the call needs to be places after the function itself.
+	};                                                              // this is the end of the validate function
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query)                                    //This begins the search function. It needs an opening curly brace.
 		
 		// split the user's search query string into an array
 		var queryArray = query.join(" ");
