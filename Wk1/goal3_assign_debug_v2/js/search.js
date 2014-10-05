@@ -22,16 +22,16 @@ October 5, 2014
 		};                                                          // end of while loop
 		while(query.charAt(query.length-1) === ""){                 // this while loop condition is asking if the string is empty
 			query = query.substring(0, query.length-1);             // returns the string for index 0 to the entire length of the string minus one
-		;
+		;                                                           // while loop needs a curly brace. This is where this is suppose to end.
 		
 		// Check search length, must have 3 characters
-		if(query.length < 3){
-			alert("Your search query is too small, try again.);
+		if(query.length < 3){                                       // this if condition asks if the query length is less than three characters
+			alert("Your search query is too small, try again.");    // this alert runs if the query is less than three characters. I had to fix it to keep my comments organizes. I could not help myself
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
-			searchInput.focus();
-			return;
-		};
+			searchInput.focus();                                    // highlights the input field
+			return;                                                 // the if statement stops
+		};                                                          // this ends the if statement. does not require semi-colon
 		
 		search(query);
 	};
