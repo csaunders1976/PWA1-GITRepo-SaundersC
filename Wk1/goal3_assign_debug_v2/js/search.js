@@ -1,21 +1,27 @@
+/*
+Chelsie Saunders
+PWA1-01 Online
+October 5, 2014
+ */
+
 // Create privatized scope using a self-executing function
-(function(){
+(function(){                                                        // this opens a self executing function. It looks correct.
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),
-		searchInput = document.forms[0].search,
-		currentSearch = ''
-	;
+	var resultsDIV = document.getElementById("results"),            // this var's name is not camelCased correctly. It should still run but is not best practice. It is an unused variable as well.
+		searchInput = document.forms[0].search,                     // I believe this variable gets the value that is typed into the search box.
+		currentSearch = ''                                          // this variable lets me know that the current search is empty but is and input for a string
+	;                                                               // this ends the list of variables.
 	
 	// Validates search query
-	var validqte == function(query){
+	var validqte =/*=*/ function(query){                            // this is an anonymous functions. it should only have one '='.
 		
-		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
-			query = query.substring(1, query.length);
-		};
-		while(query.charAt(query.length-1) === ""){
-			query = query.substring(0, query.length-1);
+		// Trim whitespace from start and end of search query       // these while loops are for validation
+		while(query.charAt(0) = " "){                               // this while loop condition asks if the input is left blank. It needs more equal signs
+			query = query.substring(1, query.length);               // this will return the entire string
+		};                                                          // end of while loop
+		while(query.charAt(query.length-1) === ""){                 // this while loop condition is asking if the string is empty
+			query = query.substring(0, query.length-1);             // returns the string for index 0 to the entire length of the string minus one
 		;
 		
 		// Check search length, must have 3 characters
@@ -117,4 +123,4 @@
 		return false;
 	;
 
-})();
+})();                                   //End of self executing funtion.
