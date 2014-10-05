@@ -24,7 +24,7 @@ Assignment: Goal1: Assignment: Duel1
     //initiate round
     var round=0;                                    // This variable is for the round that will be incremented for the for loop below
 
-//__________________________________END OF VARIABLES___________________________________________________//
+//__________________________________END OF VARIABLES____________________________________________________//
     function fight(){                                                                                   // This function is for the fight itself
 //      console.log('in the fight function');                                                           // this console.log was to help me understand the order in which code is executed
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);       // This is an alert to start the game. It states
@@ -58,10 +58,9 @@ Assignment: Goal1: Assignment: Duel1
                 break;                                                                                  // this puts an end to all this craziness. If a winner is determined before the ten rounds
                                                                                                         // are over this ends the rounds
             }                                                                                           // end of if else statement
-
         }                                                                                               // end of for loop
     }                                                                                                   // end of the fight function
-
+//______________________________Start of winnerCheck function___//
     function winnerCheck(){                                     // this function will measure the players health and determine if there is a winner
         console.log("in winnerCheck function");                 // this lets me know that my winnerCheck function is running
         var result="no winner";                                 // this variable is for the result. it is set to 'no winner'
@@ -76,8 +75,9 @@ Assignment: Goal1: Assignment: Duel1
         return result;                                          // this returns the information computed by the winnerCheck function which determines the winner
     }                                                           // end of winnerCheck function
 
+//____________________________End of winnerCheck function------//
     /*******  The program gets started below *******/
-    console.log('program starts');       //this console log helps me determine the order which code is executed int the console.log
+    console.log('program starts');      //this console log helps me determine the order which code is executed int the console.log
     fight();                            //This calls the fight function. This is where the fight really begins.
 
 })();                                   // End of self executing function
