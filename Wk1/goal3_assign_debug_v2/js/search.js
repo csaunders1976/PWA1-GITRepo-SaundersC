@@ -37,40 +37,40 @@ October 5, 2014
 	};                                                              // this is the end of the validate function
 	
 	// Finds search matches
-	var search = function(query)                                    //This begins the search function. It needs an opening curly brace.
+	var search = function(query)                                    // This begins the search function. It needs an opening curly brace.
 		
 		// split the user's search query string into an array
-		var queryArray = query.join(" ");
+		var queryArray = query.join(" ");                           // turns the search into an array
 		
 		// array to store matched results from database.js
-		var results = [];
+		var results = [];                                           // variable for the information in the database
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){
+		for(var i=0, j=db.length; i<j; i++){                                            // for loop to go through all items in the database
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+			var dbTitleEnd = db[i].indexOf('|');                                        // variable to hold the title end of the video
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);                  // variable to hold the title of the video and make lower case. Needs to be changed to toLowerCase
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
-				var qitem = queryArray[ii].tolowercase();
+			for(var ii=0, jj=queryArray.length; ii<jj; ii++){                           // for loop loops through all characters in the users query
+				var qitem = queryArray[ii].tolowercase();                               // variable to store query in array and in all lower case. .tolowercase needs to be .toLowerCase
 				
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);
-				if(compare !== -1){
-					results.push(db[i]);
-				};
-			;
-		;
+				var compare = dbitem.indexOf(qitem);                                    // variable to compare database item to query item
+				if(compare !== -1){                                                     // if condition has an extra =
+					results.push(db[i]);                                                // puts the results in the db array that I can't find it declaration??/
+				};                                                                      // End of if statement. Is semi-colon necessary?
+			;                                                                           // End of for loop...curly brace?
+		;                                                                               // End of for loop... another missing curly brace
 		
-		results.sort();
+		results.sort();                                                                 // sorts the items in the results array and returns them
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
+		if(results.length = 0){                                                         // 
 			noMatch();
 		}else{
 			showMatches(results);
