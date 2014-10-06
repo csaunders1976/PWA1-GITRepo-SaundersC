@@ -70,12 +70,12 @@ October 5, 2014
 		results.sort();                                                                 // sorts the items in the results array and returns them
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){                                                         // 
-			noMatch();
-		}else{
-			showMatches(results);
-		};
-	};
+		if(results.length = 0){                                                         // if condition asks if there is no match
+			noMatch();                                                                  // function cal for noMatch...it is an anonymous function so there is a problem
+		}else{                                                                          // 'else' there is a match
+			showMatches(results);                                                       // since there is a match showMatches(results); function is called
+		};                                                                              // end of if statement
+	};                                                                                  // end of search function
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
 	var noMatch = function(){
