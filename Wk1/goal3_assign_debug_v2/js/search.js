@@ -78,49 +78,49 @@ October 5, 2014
 	};                                                                                  // end of search function
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
-		var html = ''+
-			'<p>No Results found.</p>'+
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
-		;
-		resultsDIV.innerHTML = html;
-	};
+	var noMatch = function(){                                                           // noMatch function is anonymous. It needs to change because it is called before
+		var html = ''+                                                                  // var for what will be printed on doc if there is not match
+			'<p>No Results found.</p>'+                                                 // html paragraph that will be added to document if there is no match
+			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'         // an gentle suggestion that will be printed if there is not match
+		;                                                                               // end of html variable
+		resultsDIV.innerHTML = html;                                                    // noMatch function return
+	};                                                                                  // end of noMatch function
 	
 	// Put matches into page as paragraphs with anchors
-	var showMatches = function(results){
+	var showMatches = function(results){                                                // this anonymous function gives the results of a matched search
 		
 		// THE NEXT 4 LINES ARE CORRECT.
-		var html = '<p>Results</p>', 
-			title, 
-			url
-		;
+		var html = '<p>Results</p>',                                                    // html variable will give the value of what will be printed out in the document if there is matches
+			title,                                                                      // title variable has not been given a value
+			url                                                                         // url variable has not been given a value
+		;                                                                               // end of variables
 		
 		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0, j=results.length; i<j; i++){                                       // for loop goes through all the results
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			titleEnd = results[i].indexOf('|');                                         // global variable... may cause future problems. Should probably declared outside of the function
+			title = results[i].subString(0, titleEnd);                                  // variable to return results array
 			
 			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);   //variable that concatenates the url of the result
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
-		};
+			html += '<p><a href=' + url + '>' + title + '</a></p>';                     // concatenation of the result print out
+		};                                                                              // end of for loop
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
-	};
+	};                                                                                  // end of showMatches function
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validqte(query);
+	document.forms[0].onsubmit = function(){                                            // function
+		var query = searchInput.value;                                                  // event call onsubmit
+		validqte(query);                                                                // call validqte function with query as its parameter
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
-		return false;
+		return false;                                                                   //ends function
 	;
 
-})();                                   //End of self executing funtion.
+})();                                                                                   //End of self executing funtion.

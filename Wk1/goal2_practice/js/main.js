@@ -153,7 +153,7 @@ console.log('------Recap Functions ----------');
 
 console.log('------ MORE Strings ----------');
 
-var str1 = 'I love JavaScript! ';
+/*var str1 = 'I love JavaScript! ';
 var str2 = 'JavaScript loves me!';
 var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -191,7 +191,7 @@ console.log(str2.substring(0,10))
 console.log(str1.toLowerCase());
 console.log(str1.toUpperCase());
 
-console.log(typeof str1.toString());
+console.log(typeof str1.toString());*/
 
 /*
 	===============================================
@@ -201,7 +201,7 @@ console.log(typeof str1.toString());
 
 console.log('------ MORE Numbers ----------');
 
-    var num = 457896;
+/*    var num = 457896;
     var dec = 33.123456;
 // Use toExponential() console.log num in exponential notation with two decimals.
 console.log(num.toExponential(2));
@@ -215,6 +215,7 @@ console.log(dec.toFixed(2));
 
 // Use toString() to console.log the type of num.
 console.log(typeof num.toString());
+*/
 
 
 
@@ -238,14 +239,14 @@ console.log(typeof num.toString());
 */
 
 console.log('------ MORE Booleans ----------');
-var num = 9 * 'k';
+/*var num = 9 * 'k';
 console.log(num);
 
 if(num){
     console.log("It's true, the value is: ", num);
 }else{
     console.log("It's false, the value is: ", num);
-}
+}*/
 
 	
 /*
@@ -325,6 +326,24 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 */
 
 console.log('------ MORE Operators - typeof() ----------');
+
+    console.log(typeof 5);
+    console.log(typeof "hi");
+
+    var str1 = "hello";
+    console.log(typeof str1);
+    console.log(typeof true);
+    console.log(typeof function(){});
+    console.log(typeof obj1);
+    console.log(typeof [1,2,3,4,5]);
+    console.log(typeof missingVariable);
+
+    console.log (typeof myString === "undefined");
+    if (typeof myString === "undefined"){
+        console.log('myString is undefined');
+    }else{
+        console.log("myString is: ", myString)
+    }
 
 
 /*
