@@ -264,33 +264,43 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 // indexOf()
 //Returns the first (least) index of an element within the array equal
 //to the specified value, or -1 if none is found.
-
+    console.log(arr2.indexOf('c'));
 
 // join()
 // Joins all elements of an array into a string.
-
+    console.log(arr2.join(','));
 
 // pop()
 // Removes the last element from an array and returns that element
 // shift() removes the first element from an array.
-
+    var element = arr1.pop();
+    console.log(element);
+    console.log(arr1);
 
 // push()
 // Adds one or more elements to the end of an array and returns the new
 //   length of the array
 // unshift() - Adds one or more elements to the front of an array.
-
+    arr2.push('f');
+    console.log(arr2);
 
 // reverse()
 // Reverses the order of the elements of an array
-
+    console.log(arr1.reverse());
 
 // splice()
 // Adds and/or removes elements from an array.
-
-
+    console.log(arr1);
+    console.log(arr1.splice(4,2)); // Note: the array was reversed above
+    console.log(arr1);
 // forEach()
 // Calls a function for each element in the array.
+    console.log(arr1);
+    arr1.forEach(function(element, index, array){
+        console.log('element', element);
+        console.log('index', index);
+        console.log('array', array);
+    });
 
 
 
@@ -314,7 +324,14 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     var firstQtr = ["Jan", "Feb", "Mar"];
     var secondQtr = ["Apr", "May", "Jun"];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-    var combined;
+    var combined = firstQtr.concat(secondQtr);
+    console.log("Concat 2 arrays:", combined);
+    var combined = firstQtr.concat(secondQtr,secondHalfYr);
+    console.log("Joined " + combined.join(","));
+    console.log(combined.pop());
+    console.log(combined);
+    var results = secondHalfYr.slice(2, 4);
+    console.log(results);
 
 
 /*
@@ -438,11 +455,11 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
-    var bondsCar = function (){
+/*    var bondsCar = function (){
         return['ferrari','lambo','vwbug'];
     }
 var cars = bondsCar();
-    console.log("James Band cars "+cars);
+    console.log("James Band cars "+cars);*/
 	/* 
 		Self Executing Functions
 	
@@ -458,9 +475,7 @@ var cars = bondsCar();
 			self function - combining the 2 statement above
 				var fn = (function(){})();	
 	*/	
-    (function(){
 
-    })();
 
 /*
 	===============================================
