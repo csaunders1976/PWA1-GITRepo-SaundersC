@@ -327,7 +327,7 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
 
 console.log('------ MORE Operators - typeof() ----------');
 
-    console.log(typeof 5);
+/*    console.log(typeof 5);
     console.log(typeof "hi");
 
     var str1 = "hello";
@@ -344,6 +344,7 @@ console.log('------ MORE Operators - typeof() ----------');
     }else{
         console.log("myString is: ", myString)
     }
+    */
 
 
 /*
@@ -370,6 +371,32 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
+    var fruit = "Papayas";
+
+    switch(fruit){
+        case "Oranges":
+            console.log("Oranges are $0.59 a pound.");
+            break;
+        case "Apples":
+            console.log("Apples are $0.32 a pound.");
+            break;
+        case "Bananas":
+            console.log("Bananas are $0.48 a pound.");
+            break;
+        case "Cherries":
+            console.log("Cherries are $3.00 a pound.");
+            break;
+        case "Mangoes":
+        case "Papayas":
+            console.log("Mangoes and Papayas are $2.79 a pound.");
+            break;
+        default:
+            console.log("Sorry, we are out of " + fruit + ".");
+
+    }
+
+
+
 /*******************************************
  STUDENT ACTIVITY 6:
 
@@ -380,18 +407,34 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if no age then console.log "No answer"
 ********************************************/
 
+    var age = 12;
+
+    switch(age){
+        case 13:
+            console.log('child');
+            break;
+        case 18:
+            console.log("adult");
+            break;
+        default:
+            console.log("No answer");
+            break;
+
+    }
 
 
-/*
-	===============================================
-	MORE:  Functions
-	-----------------------------------------------
 
-	- we reviewed returns and we went through examples with returns only 
-		returning one value
-	- below shows how to returning multiple values using arrays
 
-*/
+    /*
+        ===============================================
+        MORE:  Functions
+        -----------------------------------------------
+
+        - we reviewed returns and we went through examples with returns only
+            returning one value
+        - below shows how to returning multiple values using arrays
+
+    */
 
 console.log('------ MORE Functions ----------');
 
