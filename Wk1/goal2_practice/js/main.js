@@ -371,7 +371,7 @@ console.log('------ MORE Operators - typeof() ----------');
 
 console.log('------ MORE Conditionals - Switch ----------');
 
-    var fruit = "Papayas";
+ /*   var fruit = "Papayas";
 
     switch(fruit){
         case "Oranges":
@@ -395,7 +395,7 @@ console.log('------ MORE Conditionals - Switch ----------');
 
     }
 
-
+*/
 
 /*******************************************
  STUDENT ACTIVITY 6:
@@ -407,7 +407,7 @@ console.log('------ MORE Conditionals - Switch ----------');
 			if no age then console.log "No answer"
 ********************************************/
 
-    var age = 12;
+  /*  var age = 12;
 
     switch(age){
         case 13:
@@ -423,7 +423,7 @@ console.log('------ MORE Conditionals - Switch ----------');
     }
 
 
-
+*/
 
     /*
         ===============================================
@@ -438,7 +438,11 @@ console.log('------ MORE Conditionals - Switch ----------');
 
 console.log('------ MORE Functions ----------');
 
-
+    var bondsCar = function (){
+        return['ferrari','lambo','vwbug'];
+    }
+var cars = bondsCar();
+    console.log("James Band cars "+cars);
 	/* 
 		Self Executing Functions
 	
@@ -454,7 +458,9 @@ console.log('------ MORE Functions ----------');
 			self function - combining the 2 statement above
 				var fn = (function(){})();	
 	*/	
+    (function(){
 
+    })();
 
 /*
 	===============================================
