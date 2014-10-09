@@ -255,8 +255,13 @@ console.log('------ Debugging ----------');
 
 */
 console.log("---------- Scope & Context ----------------");
-
-
+var myCtr = 0;
+    var myCounter1 = function(newct){
+        var myCtr = newct + 10;
+        console.log('function:',myCtr);
+    };
+    myCounter1(5);
+    console.log('after function myCtr:', myCtr);
 
 
 
@@ -270,6 +275,25 @@ console.log("---------- Scope & Context ----------------");
 
     console.log("---------- Closure ----------------");
 
+    var fname = 'James';
+
+    var nameFN = function (var1){
+        var firstName = var1;
+        var lastName = 'Bond';
+        var name = firstName + ' ' + lastName;
+
+        var closureFN = function(){
+        console.log('first & last name: = ', name);
+        };
+        return closureFN;
+    };
+
+    var fullName = nameFN(fname);
+    console.log('returned full name: =', fullName);
+    console.log('var fname:', fname);
+    //console.log('first name: = ', firstName);
+    //console.log('last name: =', lastName);
+    fullName();
 
 
     /*

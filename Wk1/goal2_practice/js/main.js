@@ -153,7 +153,7 @@ console.log('------Recap Functions ----------');
 
 console.log('------ MORE Strings ----------');
 
-/*var str1 = 'I love JavaScript! ';
+var str1 = 'I love JavaScript! ';
 var str2 = 'JavaScript loves me!';
 var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -191,7 +191,7 @@ console.log(str2.substring(0,10))
 console.log(str1.toLowerCase());
 console.log(str1.toUpperCase());
 
-console.log(typeof str1.toString());*/
+console.log(typeof str1.toString());
 
 /*
 	===============================================
@@ -257,7 +257,7 @@ if(num){
 
 console.log('------ MORE Arrays ----------');
 
-var arr1 = [1, 2, 3, 4, 5, 6, 7];
+/*var arr1 = [1, 2, 3, 4, 5, 6, 7];
 var arr2 = ['a', 'b', 'c', 'd', 'e'];
 var arr3 = ['apple', 'orange', 50393, 7.324];
 
@@ -300,7 +300,7 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
         console.log('element', element);
         console.log('index', index);
         console.log('array', array);
-    });
+    });*/
 
 
 
@@ -321,7 +321,7 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
         and console.log the results
  ********************************************/
 
-    var firstQtr = ["Jan", "Feb", "Mar"];
+   /* var firstQtr = ["Jan", "Feb", "Mar"];
     var secondQtr = ["Apr", "May", "Jun"];
     var secondHalfYr = ["Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     var combined = firstQtr.concat(secondQtr);
@@ -332,7 +332,7 @@ var arr3 = ['apple', 'orange', 50393, 7.324];
     console.log(combined);
     var results = secondHalfYr.slice(2, 4);
     console.log(results);
-
+*/
 
 /*
 	===============================================
@@ -506,9 +506,15 @@ var cars = bondsCar();
 				//code goes here
 			}			
 */
-console.log('------ While / Loop ----------');
+/*console.log('------ While / Loop ----------');
 
-	
+        var numOfBeers = 10;
+
+        while(numOfBeers > 0){
+            console.log(numOfBeers +" kegs on the wall.");
+            numOfBeers--;
+        }
+	*/
 /*
 	===============================================
 	For Loop, prebuilt logic structure
@@ -531,9 +537,12 @@ console.log('------ While / Loop ----------');
 			};
 */
 
-console.log('------For Loop ----------');
+/*console.log('------ For Loop ----------');
 
-
+    for(var beers = 10; beers > 0 ; beers--){
+        console.log(beers + " bottles of beer on the wall." );
+    }
+*/
 	/* 
 		array.Length
 	
@@ -546,6 +555,11 @@ console.log('------For Loop ----------');
 			- the  .length property returns the count, which would be 5	
 	*/	
 
+    var myNums = [1,2,3,4,5];
+    console.log('length:', myNums.length);
+    for(i=0; i<myNums.length; i++){
+        console.log(myNums[i]);
+    }
 
 	/* 
 		using the for() loop with .length
@@ -565,7 +579,9 @@ console.log('------For Loop ----------');
 		- depending on the size of an array, it can be more efficient to 
 			save the array length in a variable, inside the first statement
 	*/
-
+for(var i= 0,j=myNums.length; i<j;i++){
+        console.log(myNums[i]);
+    }
 
 	/*
 		BREAK...
@@ -574,7 +590,13 @@ console.log('------For Loop ----------');
 		- by using the "break" statement, any loop will stop running at the 
 			break point, and perform no more iterations
 	*/
-
+    for(var i= 0,j=myNums.length; i<j;i++){
+        if(i===3){
+          console.log("testing out the break and it broke");
+            continue;
+        }
+        console.log("length in for loop:", myNums[i]);
+    }
 
 
 	/*
@@ -597,7 +619,13 @@ console.log('------For Loop ----------');
 		b.  create a for loop using the faster method (4 parameters)
 			- in the loop just console.log the values
 ********************************************/
-
+var comics =["Superman", "Batman", "Wolverine", "Iceman"];
+    for(i=0; i<comics.length; i++){
+        console.log(comics[i]);
+    }
+    for(var i= 0,j=comics.length; i<j;i++){
+        console.log(comics[i]);
+    }
 
 
 /*******************************************
