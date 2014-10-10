@@ -90,30 +90,37 @@
 
     console.log("5. how many vowels in a word");
     var vowelsInWord = function(word){
-        var newArr = word.split("");
-        var a = "a", e = "e", i = "i", o = "o", u = "u", y = "y";
-        var amount = 0;
-        var vowelCounter = function(v) {
-            for(i = 0; i < newArr.length; i++) {
-                if(newArr[i] === v) {
-                    amount++;
-                }
+        var vowels = ["a", "e", "i", "o", "u", "y"];
+        var count = 0;
+        this.word = word.toLowerCase().split("");
 
-            }
-        return amount;
+        for(var i=0, j=this.word.length; i<j; i++) {
+            for(var ii=0,jj=vowels.length; ii<jj; ii++){
+                if(this.word[i] === vowels[ii]){
+                    count++;
+                };
+            };
         };
-        //console.log(vowelCounter(a));
-        console.log(vowelCounter(i));
-
+        return count;
     };
-
 
     console.log(vowelsInWord('JavaScript'));
 
     //--------------------------------------------------------
-    console.log("6. find number and create an array of even or odd numbers");
+   console.log("6. find number and create an array of even or odd numbers");
+    /*6.  create a function named 'findNum'
+    - accepts 2 parameters into the function - 1. array of numbers, 2. boolean
+    - if the second parameter being passed is "false" or null then
+    - create an array with all of the odd numbers from
+    the array
+    - else - create an array with all of the even numbers
+    from the array
+    - return the array
+    - console.log the answer outside of the function*/
 
-        //PUT FUNCTION HERE
+    var findNum = function(arr1,isIt){
+
+    }
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
