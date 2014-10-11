@@ -1,7 +1,7 @@
 /*
 Chelsie Saunders
-Date: October 3, 2014
-Assignment: Goal1: Assignment: Duel1
+Date: October 10, 2014
+Assignment: Duel2
  */
 
 //self-executing function
