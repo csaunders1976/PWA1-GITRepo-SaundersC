@@ -8,9 +8,11 @@ Assignment: Goal1: Assignment: Duel1
 (function(){                                        //I not sure why we do this. I imagine it gets this going as soon as the browser opens the js file
 
     console.log("FIGHT!!!");                        //This was so I could test to see if I linked up my Javascript to my HTML document.
-//___________________________________VARIABLES______________________________________________________//
-    //player name
-    var playerOneName = "Mr. Rogers";               //This variable is declared for the name of the first player
+//___________________________________Player Arrays______________________________________________________//
+
+    var competitorOne = ["Ernie", 30, 100];         // Array for player one
+    var competitorTwo = ["Bert", 20, 100];          // Array for player
+/*  var playerOneName = "Mr. Rogers";               //This variable is declared for the name of the first player
     var playerTwoName = "Captain Kangaroo";         //This variable is declared for the name of the second player
 
     //player damage
@@ -20,11 +22,10 @@ Assignment: Goal1: Assignment: Duel1
     //player health
     var playerOneHealth = 100;                      // This variable is how much health points player one has to start with
     var playerTwoHealth = 100;                      // This variable is how much health points player two has to start with
-
+*/
     //initiate round
     var round=0;                                    // This variable is for the round that will be incremented for the for loop below
 
-//__________________________________END OF VARIABLES____________________________________________________//
     function fight(){                                                                                   // This function is for the fight itself
 //      console.log('in the fight function');                                                           // This console.log was to help me understand the order in which code is executed
         alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);       // This is an alert to start the game. It states
