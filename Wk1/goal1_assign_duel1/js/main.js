@@ -28,31 +28,31 @@ Assignment: Goal1: Assignment: Duel1
 
     function fight(){                                                                                   // This function is for the fight itself
 //      console.log('in the fight function');                                                           // This console.log was to help me understand the order in which code is executed
-        alert(playerOneName+":"+playerOneHealth+"  *START*  "+playerTwoName+":"+playerTwoHealth);       // This is an alert to start the game. It states
+        alert(competitorOne[0]+":"+competitorOne[2]+" *START* "+competitorTwo[0]+":"+competitorTwo[2]); // This is an alert to start the game. It states
         for (var i = 0; i < 10; i++){                                                                   // This is a for loop sets up 10 rounds of fighting
             //console.log(i);                                                                           // This console.log helps me determine if my for loop is producing 10 rounds
             //random formula is - Math.floor(Math.random() * (max - min) + min);                        // This will create a random number so that the results of the fight are unpredictable
-            var minDamage1 = player1Damage * .5;                                                        // This variable declares the value for minimum damage for player one
-            var minDamage2 = player2Damage * .5;                                                        // This variable declares the value for minimum damage for player two
-            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);                   // This formula creates a random number player one's damage
-            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);                   // This formula creates a random number player two's damage
+            var minDamage1 = competitorOne[1] * .5;                                                     // This variable declares the value for minimum damage for player one...I had change to accommodate the new array
+            var minDamage2 = competitorTwo[1] * .5;                                                     // This variable declares the value for minimum damage for player two..I had change to accommodate the new array
+            var f1 = Math.floor(Math.random()*(competitorOne[1]-minDamage1)+minDamage1);                   // This formula creates a random number player one's damage
+            var f2 = Math.floor(Math.random()*(competitorTwo[1]-minDamage2)+minDamage2);                   // This formula creates a random number player two's damage
        //   console.log(f1);                                                                            // This console.log is to see if my formula worked for f1
        //   console.log(f2);                                                                            // This console.log is to see if my formula worked for f2
             //inflict damage
-            playerOneHealth-=f1;                                                                        // This subtracts the random number of damage points to player one's health
-            playerTwoHealth-=f2;                                                                        // This subtracts the random number of damage points to player two's health
+            competitorOne[1]-=f1;                                                                        // This subtracts the random number of damage points to player one's health
+            competitorTwo[1]-=f2;                                                                        // This subtracts the random number of damage points to player two's health
 
-            //console.log(playerOneHealth);                                                             // This tells me how much health player one has
-            //console.log(playerTwoHealth);                                                             // This tells me how much health player two has
+            //console.log(competitorTwo[1]);                                                             // This tells me how much health player one has
+            //console.log(competitorOne[1]);                                                             // This tells me how much health player two has
 
-            console.log(playerOneName+": "+playerOneHealth + " " + playerTwoName+":"+playerTwoHealth);  // This console.logs the players health
+            console.log(competitorOne[0]+": "+competitorOne[2] + " " + competitorTwo[0]+":"+competitorTwo[2]);  // This console.logs the players health
 
             //check for victor
             var results = winnerCheck();                                                                 // This variable is a function call that captures the result of the winnerCheck function
             console.log(results);                                                                        // This logs the result or information returned by the winnerCheck function
             if (results==="no winner"){                                                                  // This if statement helps determine if there is a winner or if the rounds need to to continue
                 round++;                                                                                 // This adds one to the round
-                alert(playerOneName+":"+playerOneHealth+"  *ROUND "+round+" OVER"+"*  "+playerTwoName+":"+playerTwoHealth); //This alert post after every round that does not produce a winner
+                alert(competitorOne[0]+":"+competitorOne[2]+"  *ROUND "+round+" OVER"+"*  "+competitorTwo[0]+":"+competitorTwo[2]); //This alert post after every round that does not produce a winner//
 
             } else{                                                                                     // Else will execute code if there is a winner or if everyone dies.
                 alert(results);                                                                         // This gives the user the results
@@ -65,7 +65,7 @@ Assignment: Goal1: Assignment: Duel1
     function winnerCheck(){                                     // This function will measure the players health and determine if there is a winner
         console.log("in winnerCheck function");                 // This lets me know that my winnerCheck function is running
         var result="no winner";                                 // This variable is for the result. it is set to 'no winner'
-        if (playerOneHealth<1 && playerTwoHealth<1)             // This if statement will give the proper result after determining the winner
+        if (competitorOne[2]<1 && competitorTwo[2]<1)             // This if statement will give the proper result after determining the winner
         {                                                       // The first condition is to determine if the results of both players dropped below 1 health points during the same round.
             result = "You Both Die";                            // This result is if both players health points drop below 1 during the same round
         } else if(playerOneHealth<1){                           // This else if condition determines if player one health drops below one first.
