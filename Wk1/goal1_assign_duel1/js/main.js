@@ -12,7 +12,9 @@ Assignment: Goal1: Assignment: Duel1
 
     var competitorOne = ["Ernie", 30, 100];         // Array for player one
     var competitorTwo = ["Bert", 20, 100];          // Array for player
-/*  var playerOneName = "Mr. Rogers";               //This variable is declared for the name of the first player
+
+/*  OLD CODE
+    var playerOneName = "Mr. Rogers";               //This variable is declared for the name of the first player
     var playerTwoName = "Captain Kangaroo";         //This variable is declared for the name of the second player
 
     //player damage
@@ -68,10 +70,10 @@ Assignment: Goal1: Assignment: Duel1
         if (competitorOne[2]<1 && competitorTwo[2]<1)             // This if statement will give the proper result after determining the winner
         {                                                       // The first condition is to determine if the results of both players dropped below 1 health points during the same round.
             result = "You Both Die";                            // This result is if both players health points drop below 1 during the same round
-        } else if(playerOneHealth<1){                           // This else if condition determines if player one health drops below one first.
-            result =playerTwoName+" WINS!!!";                   // This is the result if player ones health drops below 1 first
-        } else if (playerTwoHealth<1){                          // This else if condition determines if player twos health drops below one first
-            result = playerOneName+" WINS!!!";                  // This result occurs with player two's health drops below 1 first
+        } else if(competitorOne[2]<1){                           // This else if condition determines if player one health drops below one first.
+            result =competitorTwo[0]+" WINS!!!";                   // This is the result if player ones health drops below 1 first
+        } else if (competitorTwo[2]<1){                          // This else if condition determines if player twos health drops below one first
+            result = competitorOne[0]+" WINS!!!";                  // This result occurs with player two's health drops below 1 first
         }                                                       // End of else if.
         return result;                                          // This returns the information computed by the winnerCheck function which determines the winner.
     }                                                           // End of winnerCheck function.
