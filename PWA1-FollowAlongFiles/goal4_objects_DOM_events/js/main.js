@@ -29,7 +29,8 @@
 console.log('------Objects ----------');
 
 //{KEY : Value} pairings,
-
+    person = {'name':'bond', 'age':35, 'secretAgent':true};
+    person = {name:'bond', age:35, secretAgent:true};
 
 
 /* accessing object properties
@@ -40,13 +41,20 @@ console.log('------Objects ----------');
 
      - also keep in mind that since the keys can be strings, you could access the keys using string variables
  */
-
+    var personAge = 'age';
+    console.log(person.name, person[personAge], person['secretAgent'])
 
 // setter
-
+    person['age'] = '40';
+    person.name = "JamesBond";
+    console.log(person);
 
 
 //nested objects
+    person = {birthday:{month:02, day:12}, name:'bond'};
+    console.log(person);
+    console.log(person['birthday']['month']);
+    console.log(person.birthday.month);
 
 
 
