@@ -14,7 +14,7 @@ Assignment: Duel2
     var bert_txt = document.querySelector("#Bert");
     var round_txt = document.querySelector("h5");
     var button = document.getElementById("fight_btn");
-
+    console.log()
     //Click Event
     button.addEventListener("click", eatCookies, false);
 
@@ -36,12 +36,15 @@ var competitors =[
 ];
 
     //initiate round
-    var round=1;                                    // This variable is for the round that will be incremented for the for loop below
+    var round=0;                                    // This variable is for the round that will be incremented for the for loop below
 
     round_txt.innerHTML = "Click \'Eat Cookies\' button to start!";
     ernie_txt.innerHTML = competitors[0].name + ": " + competitors[0].health;
     bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health;
-
+    //console.log(bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health);
+function onClick() {
+    eatCookies()
+}
     function eatCookies(){                                                                                   // This function is for the cookie consumption itself
 //      console.log('in the fight function');                                                           // This console.log was to help me understand the order in which code is executed
         //alert(competitorOne[0]+":"+competitorOne[2]+"  *START*  "+competitorTwo[0]+":"+competitorTwo[2]); // This is an alert to start the game. Changed for array
@@ -109,7 +112,7 @@ var competitors =[
 //____________________________End of winnerCheck function------//
     /*******  The program gets started below *******/
     console.log('program starts');      //This console log helps me determine the order which code is executed int the console.log.
-    eatCookies();                            //This calls the eatCookies function. This is where the cookie consumption really begins.
+    //eatCookies();                            //This calls the eatCookies function. This is where the cookie consumption really begins.
 
 })();                                   // End of self executing function.
 
