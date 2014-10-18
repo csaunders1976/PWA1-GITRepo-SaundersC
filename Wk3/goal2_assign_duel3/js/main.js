@@ -5,49 +5,44 @@ Assignment: Duel2
  */
 
 //self-executing function
-(function(){                                        //I not sure why we do this. I imagine it gets this going as soon as the browser opens the js file
-
-    console.log("Eat the Cookies!!!");                        //This was so I could test to see if I linked up my Javascript to my HTML document.
+(function(){                                                    //This gets the ball rolling
+    //console.log("Eat the Cookies!!!");                        //This was so I could test to see if I linked up my Javascript to my HTML document.
 
     // Grab all the needed elements in the the DOM
-    var ernie_txt = document.querySelector("#Ernie");
-    var bert_txt = document.querySelector("#Bert");
-    var round_txt = document.querySelector("h5");
-    var button = document.getElementById("fight_btn");
-    console.log()
-    //Click Event
-    button.addEventListener("click", eatCookies, false);
+    var ernie_txt = document.querySelector("#Ernie");           // I got the text for Ernie
+    var bert_txt = document.querySelector("#Bert");             // I got the text for Bert
+    var round_txt = document.querySelector("h5");               // I got the text for the Round
+    var button = document.getElementById("fight_btn");          // I got the button
 
-//___________________________________Player Arrays______________________________________________________//
+    button.addEventListener("click", eatCookies, false);          //click the button and the cookie eating begins!
 
+//___________________________________Player Objects______________________________________________________//
 
-
-var competitors =[
+var competitors =[                          //Created objects for players
     {
-    name:"Ernie",
-    damage: 20,
-    health: 100
-    },
+    name:"Ernie",                           // Player one gets a name
+    damage: 20,                             // Player one's potential damage
+    health: 100                             // Player one's cookies
+    },                                      // end of object[0]
     {
-    name: "Bert",
-    damage: 20,
-    health: 100
-    }
-];
+    name: "Bert",                           // Player two gets a name
+    damage: 20,                             // Player two's potential damage
+    health: 100                             // Player two's cookies
+    }                                       // end of object[2]
+];                                          // end of object
 
     //initiate round
     var round=0;                                    // This variable is for the round that will be incremented for the for loop below
 
-    round_txt.innerHTML = "Click \'Eat Cookies\' button to start!";
-    ernie_txt.innerHTML = competitors[0].name + ": " + competitors[0].health;
-    bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health;
-    //console.log(bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health);
-function onClick() {
+    round_txt.innerHTML = "Click \'Eat Cookies\' button to start!";                 //text for initial instructions
+    ernie_txt.innerHTML = competitors[0].name + ": " + competitors[0].health;       //prints Ernies info
+    bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health;        //prints Berts info
+
+function onClick() {                                                                //starts the eatCookies function when the button is clicked
     eatCookies()
 }
-    function eatCookies(){                                                                                   // This function is for the cookie consumption itself
-//      console.log('in the fight function');                                                           // This console.log was to help me understand the order in which code is executed
-        //alert(competitorOne[0]+":"+competitorOne[2]+"  *START*  "+competitorTwo[0]+":"+competitorTwo[2]); // This is an alert to start the game. Changed for array
+    function eatCookies(){                                                          // This function is for the cookie consumption itself
+ 
         ernie_txt.innerHTML = competitors[0].name + competitors[0].health;
         ernie_txt.innerHTML = competitors[1].name + competitors[1].health;
 
@@ -112,7 +107,6 @@ function onClick() {
 //____________________________End of winnerCheck function------//
     /*******  The program gets started below *******/
     console.log('program starts');      //This console log helps me determine the order which code is executed int the console.log.
-    //eatCookies();                            //This calls the eatCookies function. This is where the cookie consumption really begins.
 
 })();                                   // End of self executing function.
 
