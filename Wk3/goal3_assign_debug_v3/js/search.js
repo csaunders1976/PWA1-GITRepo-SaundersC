@@ -2,7 +2,7 @@
  Chelsie Saunders
  PWA1-01 Online
  Debug Week #3
- October 11, 2014
+ October 16, 2014
  */
 // Create privatized scope using a self-executing function
 (function(){
@@ -16,10 +16,10 @@
     var validate = function(query){                                             // this is an anonymous functions. I fixed the spelling
 // Trim whitespace from start and end of search query                           // these while loops are for validation
         while(query.charAt(0) === " "){                                         // this while loop condition asks if the input is left blank.
-            query = query.substring(1, query.length);                           // this will return the entire string
+            query = query.substring(1, query.length);                           // this will return the entire string. Changed camel-case on subString to substring
         };                                                                       // end of while loop
         while(query.charAt(query.length-1) === "") {                            // this while loop condition is asking if the string is empty
-            query = query.substring(0, query.length - 1);                       // returns the string for index 0 to the entire length of the string minus one
+            query = query.substring(0, query.length - 1);                       // returns the string for index 0 to the entire length of the string minus one. Changed camel-case on subString to substring
         };                                                                       // while loop  end.
 // Check search length, must have 3 characters
         if(query.length < 3){                                               // this if condition asks if the query length is less than three characters
@@ -57,7 +57,7 @@
 
         results.sort();                                                 // sorts the items in the results array and returns them
 // Check that matches were found, and run output functions
-        if(results.length === 0){                                         // if condition asks if there is no match
+        if(results.length === 0){                                         // if condition asks if there is no match. Corrected the assignment operator to a ===
             noMatch();
             // function cal for noMatch...it is an anonymous function so there is a problem
         }else{ // 'else' there is a match
