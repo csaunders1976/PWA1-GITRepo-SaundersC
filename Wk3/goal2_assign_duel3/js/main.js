@@ -23,13 +23,24 @@ Assignment: Duel2
 
 
 var competitors =[
+    {
     name:"Ernie",
-    damagege20, 100];
-    ["Bert", 20, 100];
-]
+    damage: 20,
+    health: 100
+    },
+    {
+    name: "Bert",
+    damage: 20,
+    health: 100
+    }
+];
 
     //initiate round
     var round=0;                                    // This variable is for the round that will be incremented for the for loop below
+
+    round_txt.innerHTML = "Click \'Eat Cookies\' button to start!";
+    ernie_txt.innerHTML = competitors[0].name + ": " + competitors[0].health;
+    bert_txt.innerHTML = competitors[1].name + ": " + competitors[1].health;
 
     function eatCookies(){                                                                                   // This function is for the cookie consumption itself
 //      console.log('in the fight function');                                                           // This console.log was to help me understand the order in which code is executed
