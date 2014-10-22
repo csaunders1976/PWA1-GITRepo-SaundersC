@@ -1,4 +1,5 @@
 /*
+    Chelsie Saunders
     PWA1: Goal 4: Course Material 4
 
 	1. Objects
@@ -26,11 +27,11 @@
 
 	-similar to making an array, we declare the object’s properties inside the literal, separating by comma...
 */
-//console.log('------Objects ----------');
+console.log('------Objects ----------');
 
 //{KEY : Value} pairings,
-//    person = {'name':'bond', 'age':35, 'secretAgent':true};
-//    person = {name:'bond', age:35, secretAgent:true};
+/*    person = {'name':'bond', 'age':35, 'secretAgent':true};
+    person = {name:'bond', age:35, secretAgent:true};*/
 
 
 /* accessing object properties
@@ -43,11 +44,15 @@
  */
 //    var personAge = 'age';
 //    console.log(person.name, person[personAge], person['secretAgent'])
-
+/*
+var personAge = "age";
 // setter
-/*  person['age'] = '40';
-    person.name = "JamesBond";
-    console.log(person);
+ person['age'] = '40';
+ person.name = "JamesBond";
+
+         //dot notation | index notation using a variable |index notation using a string
+    console.log(person.name, person[personAge],person['secretAgent']);
+
 
 
 //nested objects
@@ -55,16 +60,17 @@
     console.log(person);
     console.log(person['birthday']['month']);
     console.log(person.birthday.month);
-
 */
+
+
 
 //---------------------------------------------
 
 // Object within an object
 
-//console.log('------Object within an object, Arrays, Function ----------');
+/*console.log('------Object within an object, Arrays, Function ----------');
 
-/*var thatGuy = {
+var thatGuy = {
     name: 'JamesBond',
     course: 'PWA1',
     address:{
@@ -91,18 +97,15 @@
 		= these members are the foundation of an oop model
 */
 
-//console.log('------Objects - properties & methods ----------');
+console.log('------Objects - properties & methods ----------');
 
 //Method 1 "Basic"
-//    var fsStudent = {};
-//    fsStudent.age = 22;
-//    fsStudent.career = 'Web Dev';
-//    fsStudent.sayHello = function(){
-//        console.log('Hello!');
-//    };
-
-
-
+/*    var fsStudent = {};
+    fsStudent.age = 22;
+    fsStudent.career = 'Web Dev';
+    fsStudent.sayHello = function(){
+        console.log('Hello!');
+    };*/
 
 // above, we first initialize the object, then we created 2 properties 
 //   for the object, and a method called sayHello - notice that the method is 
@@ -125,6 +128,7 @@ Method 2 "OBJECT Literal"
 	- below is the same object as in Method 1
 */
 /*
+
     var fsStudent = {
     age: 22,
     career:'Web Dev',
@@ -138,6 +142,7 @@ Method 2 "OBJECT Literal"
     console.log(fsStudent.age);
     console.log(fsStudent['age']);
 */
+
 
 
 //---------------------------------------------
@@ -165,10 +170,10 @@ STUDENT ACTIVITY 1:
              d. one student's GPA using dot syntax and index syntax
  ----------------------------------------------------------------------------- */
 
-//console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
+console.log('------ STUDENT ACTIVITY - ANSWERS BELOW ----------');
 
 // this is integrating multiple data types - object with an array of objects
-/*
+
     var school = {
 
         schoolName: "Full Sail",
@@ -190,7 +195,7 @@ STUDENT ACTIVITY 1:
     console.log(school[fieldName1]);
 
     console.log("James Bond's GPA",school.students[2].GPA);
-    console.log("James Bond's GPA",school['students'][2]['GPA']);*/
+    console.log("James Bond's GPA",school['students'][2]['GPA']);
 
 
 
@@ -206,7 +211,7 @@ STUDENT ACTIVITY 1:
     2.  console.log the average grade by calling the gradeAvg method.
 ----------------------------------------------------------------------------- */
 
-   /* var gradeAvg =function(num){
+   var gradeAvg =function(num){
         var count = 0;
         var total = 0;
         for(i = 0, j = school.students.length; i<j; i++){
@@ -216,7 +221,7 @@ STUDENT ACTIVITY 1:
         return total/count;
     };
     gradeAvg(school);
-    console.log('Average Grade:', gradeAvg(school));*/
+    console.log('Average Grade:', gradeAvg(school));
 /* ===============================================================
 	The for-in object loop
 ------------------------------------------------------------------	
@@ -225,12 +230,12 @@ STUDENT ACTIVITY 1:
 		obj[key]
 	}
 */
-    /*console.log("---------- Object - For In Loop ----------------");
+   console.log("---------- Object - For In Loop ----------------");
     var students = {name:"JamesBond",gender:"male",job:"student"};
     for(var key in students){
         console.log('Key Name: ', key);
         console.log('Value of the key[',key,']', students[key]);
-    };*/
+    };
 
 
 /*
