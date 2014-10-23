@@ -28,8 +28,8 @@
       <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PWA1-FollowAlongFiles/goal5_RegEx_Math_Date/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7067669" vertical-offset="6235" max-vertical-offset="6900">
-              <caret line="447" column="23" selection-start-line="447" selection-start-column="23" selection-end-line="447" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.59398496" vertical-offset="6010" max-vertical-offset="7125">
+              <caret line="427" column="46" selection-start-line="427" selection-start-column="46" selection-end-line="427" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -75,9 +75,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="22" />
-    <option name="width" value="1420" />
+    <option name="x" value="103" />
+    <option name="y" value="33" />
+    <option name="width" value="1210" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -258,14 +258,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="22" width="1420" height="775" extended-state="0" />
+    <frame x="103" y="33" width="1210" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29366198" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3446281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -653,8 +653,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PWA1-FollowAlongFiles/goal5_RegEx_Math_Date/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7067669" vertical-offset="6235" max-vertical-offset="6900">
-          <caret line="447" column="23" selection-start-line="447" selection-start-column="23" selection-end-line="447" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.59398496" vertical-offset="6010" max-vertical-offset="7125">
+          <caret line="427" column="46" selection-start-line="427" selection-start-column="46" selection-end-line="427" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

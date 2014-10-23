@@ -400,24 +400,35 @@ STUDENT ACTIVITY
 */
 
     console.log('------------ Math Methods -------------------');
+    //console.log(document.getElementById("tagbox").innerHTML = Math.random());
+    var rand = (Math.random() * 10 + 1);
+    console.log(rand);
+    var num = Math.floor(rand);
+    console.log(num);
+
+    //console.log(document.getElementById("tagbox").innerHTML = Math.max(5,10));
+    //console.log(document.getElementById("tagbox").innerHTML = Math.round(2.5));
 
 
+    //******************************************************************************
+    // STUDENT ACTIVITY
 
-    /******************************************************************************
-     STUDENT ACTIVITY
+//     1.  Determine what the maximum and minimum number is for these numbers
+    //console.log(document.getElementById("tagbox").innerHTML = Math.max(100, 1000, 50, 2, 55, 75));
+   // console.log(document.getElementById("tagbox").innerHTML = Math.min(100, 1000, 50, 2, 55, 75));
 
-     1.  Determine what the maximum and minimum number is for these numbers
-     (100, 1000, 50, 2, 55, 75)
+//     2.  Produce a random number between 100 and 10,000.
+    var activityTwo = (Math.random() * 10000 + 100);
+    var activity = Math.ceil(activityTwo);
+    //console.log(document.getElementById("tagbox").innerHTML = activity);
+/*     3. 	Produce a random number between 100 and 10, and round it to the nearest
+     integer.  Console.log the random number before and after you round the number.*/
+    var activityThree = (Math.random() * 100 + 10);
+    console.log(activityThree)
+    var activity3 = Math.round(activityThree);
+    console.log(document.getElementById("tagbox").innerHTML = activity3);
 
-
-     2.  Produce a random number between 100 and 10,000.
-
-
-     3. 	Produce a random number between 100 and 10, and round it to the nearest
-     integer.  Console.log the random number before and after you round the number.
-
-
-    ****************************************************************************/
+ //   ****************************************************************************/
 
 
 
@@ -435,17 +446,21 @@ STUDENT ACTIVITY
 
     console.log('------------ Date Methods -------------------');
 
+/*
 console.log(new Date());
     var d = new Date();
-    /*console.log(d.getDate());
+    */
+/*console.log(d.getDate());
     console.log(d.getDay());
     console.log(d.getFullYear());
     console.log(d.getHours());
     console.log(d.getMilliseconds());
     console.log(d.getTime());
     console.log(d.setFullYear(2021,0,01));
-    document.getElementById("tagbox").innerHTML=d;*/
+    document.getElementById("tagbox").innerHTML=d;*//*
+
     console.log(typeof d.toString());
+*/
 
 
 
