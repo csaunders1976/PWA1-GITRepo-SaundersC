@@ -49,14 +49,14 @@ person = {'name':'bond', 'age':35, 'secretAgent':true};
 
 // STUDENT - how would you write the above with the KEY not being a
 //      string?
-
+person = {name : 'bond', age : 35, secretAgent : true};
 
 // nested object
 person = {birthday:{month:02, day:12}, name:'bond'};   //setter
 
 
 //STUDENT - how would you console.log the birthday month in dot notation?
-
+console.log(person.birthday.month,"/" + person.birthday.day);
 
 // Object within an object, Arrays, Function
 var thatGuy = {
@@ -76,11 +76,13 @@ var thatGuy = {
 
 //STUDENT - How would you invoke the "showMyAddress" function using dot
 //      syntax?
+var testIt =   thatGuy.showMyAddress();
+    console.log(testIt);
 
 
 //STUDENT - console.log the street address and city using dot notation.
 
-
+console.log(thatGuy.address.num + ' ' + thatGuy.address.street +" \n" + thatGuy.address.city );
 // below is an object that contains an array of objects
 var obj1 = {
 	schoolName:'Full Sail',
@@ -95,7 +97,7 @@ var obj1 = {
 	};
 
 //STUDENT - how would you get the length of the students array?
-
+console.log(obj1.students.length);
 
 /*
 	==============================================================
@@ -134,7 +136,7 @@ console.log('------------ Document Object Model (DOM) -------------------');
 //STUDENT - using the console.log above, how would you include ALL the 'li'
 //      for the id #nav?
 
-
+console.log(document.querySelectorAll('#nav li').innerHTML);
 
 /*
 	==================================================================
@@ -306,30 +308,41 @@ console.log('------------ DOM Events -------------------');
 
 console.log('------------ Regular Expressions -------------------');
 
+/*
+    jamesbond@fullsail.com
+    JamesBond@fullsail.com
+    James-Bond@fullsail.com
+    James.Band@fullsail.com
+    jamesbond@66.192.104.74
+*/
+
+ /*   var emailRegEx =  /(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})/;
+    var email = new RegEx(emailRegEx);*/
+
 /******************************************************************************
 STUDENT ACTIVITY
 
 	1.  Write a RegEx for a basic name (containing only letters)
 
-		Answer: 
+		Answer: /^[a-zA-Z]+$/
 
 	2.  What are the possible answers for this: /[Jj]ava[Ss]cript/
 
-		Answer: 
+		Answer: javascript Javascript javaScript JavaScript
 
 	3. 	What are the possible answers for this: /^(Java)?Script$/
 
-		Answer: 
+		Answer: Script JavaScript
 
 	4. 	Describe the possible answer for this: /^[a-zA-Z\^\-\.]+$/
 
-		Answer: 
+		Answer: letters ony
 
 	5.	Combining character sets can create sequences of matches.
 		
 		Describe the possible answers for this: /^[a-zA-Z]+[0-9]$/ 	
 
-		Answer: 
+		Answer: one or more of letters plus one  number 0-9
 
 ----------------------------------------------------------------------------- */
 
@@ -346,9 +359,16 @@ STUDENT ACTIVITY
 	split()		string.split.(RegExp): cuts a string into an array, making cuts at matches
 */
 
-
-
-
+    var emailRegEx = /(\w[-.\w]*\w@\w[-._\w]*\w\.\w{2,3})/;
+    var str = "My personal email is jc@google.com but my work email is jc@fullsail.com";
+    console.log(emailRegEx.exec(str));
+    console.log(emailRegEx.test(str));
+    console.log(str.search(emailRegEx));
+    var clean = str.replace(emailRegEx,"XXX@XXX.com");
+    console.log(clean);
+    var clean = clean.replace(emailRegEx,"jc@gmail.com");
+    console.log(clean);
+    console.log(str.match(emailRegEx));
 
 
 /* 
@@ -425,7 +445,7 @@ STUDENT ACTIVITY
      integer.  Console.log the random number before and after you round the number.*/
     var activityThree = (Math.random() * 100 + 10);
     console.log(activityThree)
-    var activity3 = Math.round(activityThree);
+    var activity3 = Math.floor(activityThree);
     console.log(document.getElementById("tagbox").innerHTML = activity3);
 
  //   ****************************************************************************/
